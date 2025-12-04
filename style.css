@@ -90,6 +90,11 @@ main {
     display: block;
 }
 
+#reussite {
+    display: none;
+    background-color: pink;
+    padding: 1rem;
+}
 footer {
     background: pink;
 }

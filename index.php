@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $host = 'localhost';
 $db   = 'inscriptions_dm';
 $user = 'root';
@@ -22,6 +24,9 @@ try {
 $sql = "SELECT prenom FROM inscrits ORDER BY id ASC LIMIT 1";
 $stmt = $pdo->query($sql);
 $premierPrenom = $stmt->fetchColumn();
+
+$showSuccess = $_SESSION['success'] ?? false;
+unset($_SESSION['success']);
 ?>
 
 <!DOCTYPE html>
@@ -50,12 +55,13 @@ $premierPrenom = $stmt->fetchColumn();
         </section>
 
         <section id="section2">
-            <form action="send.php" method="post">
+            <form id="envoi" action="send.php" method="post">
                 <label for="prenom">Prénom :</label>
                 <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
                 <label for="email">Email :</label>
                 <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
                 <button type="submit" class="button1">Validez</button>
+                <p id="successMessage" style="display:<?php echo $showSuccess ? 'block' : 'none'; ?>">Votre demande a bien été envoyée !</p>
             </form>
         </section>
     </main>
@@ -63,5 +69,7 @@ $premierPrenom = $stmt->fetchColumn();
     <footer>
         Page web faite par <?php echo htmlspecialchars($premierPrenom ?? ''); ?> venant de la base de données Php
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

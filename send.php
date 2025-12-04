@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $host = 'localhost';
 $db   = 'inscriptions_dm';
 $user = 'root';
@@ -26,6 +28,7 @@ if (!empty($prenom) && !empty($email)) {
     $sql = "INSERT INTO inscrits (prenom, mail) VALUES (:prenom, :mail)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['prenom' => $prenom, 'mail' => $email]);
+    $_SESSION['success'] = true;
 }
 
 header("Location: index.php");
