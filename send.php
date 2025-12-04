@@ -30,4 +30,3 @@ if (!empty($prenom) && !empty($email)) {
 
 header("Location: index.php");
 exit();
-?>
