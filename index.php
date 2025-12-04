@@ -30,12 +30,12 @@
     </section>
 
     <section id="section2">
-        <form>
+        <form action="send.php" method="post">
             <label for="prenom">Prénom :</label>
             <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
             <label for="email">Email :</label>
             <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
-            <button class="button1">Validez</button>
+            <button type="submit" class="button1">Validez</button>
         </form>
     </section>
 </main>
