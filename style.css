@@ -36,33 +36,44 @@ ul {
 
 main {
     background: #32CD32;
+    padding: 1rem;
+    gap: 1rem;
+    margin: 2rem 0;
+    display: flex;
+    size: 0;
 }
 
-.section1 {
+#section1 {
     background: yellow;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
 }
 
-.section1 > p {
+#section1 > p {
     background: #87CEFA;
+    margin: 1rem;
 }
 
-.section1 > img {
+#section1 > img {
     background: #87CEFA;
+    margin: 1rem;
 }
 
-.section2 {
+#section2 {
     background: yellow;
+    display: flex;
 }
 
-.contact {
+#contact {
     background: #DB7093;
 }
 
-.section2 > button {
+#section2 > button {
     background: #483D8B;
 }
 
-.section2 > p {
+#section2 > p {
     background : salmon;
 }
 
