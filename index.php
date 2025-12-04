@@ -2,7 +2,7 @@
 
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -28,14 +28,20 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, vel.</p>
         <p>Ullam corrupti possimus adipisci voluptatem facilis, dicta maxime, itaque veniam ut similique, quia aspernatur?</p>
     </section>
-    
+
     <section id="section2">
-        <form action=""></form>
+        <form>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+            <button class="button1">Validez</button>
+        </form>
     </section>
 </main>
 
 <footer>
-
+    <p>Page web</p>
 </footer>
 
 </html>
